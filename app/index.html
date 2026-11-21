@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Panels — GTA-style Cover Art Maker</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="app">
+  <aside class="controls">
+    <header class="brand">
+      <h1>Vice <span>Panels</span></h1>
+      <p>Turn your photos into GTA-style cover art. Everything happens on your machine — photos never leave it.</p>
+    </header>
+
+    <section class="group">
+      <h2>1 · Photos</h2>
+      <label class="drop" id="dropZone">
+        <input id="photoInput" type="file" accept="image/*" multiple hidden>
+        <strong>Drop photos here</strong> or click to choose — add as many as you like.
+      </label>
+      <div class="row">
+        <button type="button" id="samplePier">Sample: the pier</button>
+        <button type="button" id="sampleBoulevard">Sample: the boulevard</button>
+      </div>
+      <div class="thumbs" id="thumbs" aria-label="Your photos"></div>
+      <div class="row">
+        <button type="button" id="fillAll">One photo, every panel</button>
+        <button type="button" id="fillSpread">Spread photos over panels</button>
+      </div>
+    </section>
+
+    <section class="group">
+      <h2>2 · Layout &amp; size</h2>
+      <div class="chips" id="layoutChips" role="group" aria-label="Panel layout"></div>
+      <div class="chips" id="sizeChips" role="group" aria-label="Export size"></div>
+    </section>
+
+    <section class="group">
+      <h2>3 · Caption</h2>
+      <label class="field">Title
+        <textarea id="titleInput" rows="2" maxlength="60">Vice Heat</textarea>
+      </label>
+      <label class="field">Subtitle
+        <input id="subtitleInput" type="text" maxlength="42" value="Ocean drive nights">
+      </label>
+      <div class="chips" id="styleChips" role="group" aria-label="Lettering style"></div>
+      <div class="row">
+        <label class="check"><input type="checkbox" id="titleTop"> Title at the top</label>
+        <label class="check"><input type="checkbox" id="badgeToggle" checked> Star badge</label>
+      </div>
+      <div class="row">
+        <label class="check"><input type="checkbox" id="chipToggle" checked> Corner chip</label>
+        <input id="chipText" class="mini" type="text" maxlength="8" value="18+">
+      </div>
+    </section>
+
+    <section class="group">
+      <h2>4 · Colour grade</h2>
+      <div class="chips" id="gradeChips" role="group" aria-label="Colour grade"></div>
+      <div class="row">
+        <label class="check"><input type="checkbox" id="grainToggle" checked> Film grain</label>
+        <label class="check"><input type="checkbox" id="vignetteToggle" checked> Vignette</label>
+      </div>
+    </section>
+
+    <section class="group" id="panelGroup">
+      <h2>5 · Selected panel</h2>
+      <p class="hint">Click a panel on the cover to select it. Drag it to move its photo, scroll to zoom.</p>
+      <div class="row">
+        <button type="button" id="panelPhotoPrev">◀ Photo</button>
+        <span id="panelPhotoName" class="panel-name">—</span>
+        <button type="button" id="panelPhotoNext">Photo ▶</button>
+      </div>
+      <label class="field">Panel grade
+        <select id="panelGrade"></select>
+      </label>
+      <label class="field">Zoom
+        <input id="panelZoom" type="range" min="1" max="3" step="0.01" value="1">
+      </label>
+      <button type="button" id="panelReset">Reset this panel's framing</button>
+    </section>
+
+    <section class="group export-group">
+      <button type="button" id="surprise">Surprise me</button>
+      <button type="button" id="exportPng" class="primary">Export PNG</button>
+      <p id="status" role="status"></p>
+    </section>
+  </aside>
+
+  <section class="stage">
+    <canvas id="stage" width="1080" height="1080" aria-label="Your cover, live preview"></canvas>
+    <p class="stage-hint">Live preview — what you see is the PNG you export.</p>
+  </section>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
