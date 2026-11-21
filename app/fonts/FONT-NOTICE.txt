@@ -1,0 +1,11 @@
+Fonts bundled with this app
+============================
+
+display.ttf — Noto Sans Condensed Black (used for the cover lettering, as "Vice Display")
+ui.ttf      — Noto Sans Bold (used for the editor and small cover text, as "Vice UI")
+
+Both are from Google's Noto font family and are
+licensed under the SIL Open Font License, Version 1.1, which allows them to be
+bundled and redistributed with this app. The full license text is widely
+published by SIL International; the fonts are unmodified apart from their file
+names, shortened so the app's paths stay simple.
