@@ -1,0 +1,6 @@
+[
+  { "name": "1-cover.jpg", "query": "?shot=cover&photo=pier&layout=collage&size=wide&caption=Vice%20Heat&sub=Ocean%20drive%20nights&style=vice&grade=sunset", "w": 1920, "h": 1080, "source": "export" },
+  { "name": "2-editor.jpg", "query": "?shot=editor&photo=both&layout=collage&size=square&caption=Harbor%20Royale&sub=Two%20photos%2C%20seven%20panels&style=chrome&grade=neon", "w": 1280, "h": 720, "source": "page" },
+  { "name": "3-cover.jpg", "query": "?shot=cover&photo=boulevard&layout=hero&size=square&caption=Boulevard%20Queen&sub=Golden%20hour%20run&style=sunset&grade=golden&pany=0.85", "w": 1080, "h": 1080, "source": "export" },
+  { "name": "4-cover.jpg", "query": "?shot=cover&photo=both&layout=duo&size=portrait&caption=Two%20Sides&sub=Of%20the%20same%20city&style=mono&grade=teal", "w": 1080, "h": 1350, "source": "export" }
+]
